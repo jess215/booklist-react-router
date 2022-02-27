@@ -1,17 +1,19 @@
-import './App.css';
-import { Route, Routes} from 'react-router-dom'
-import Navbar from './components/Navbar'
-import About from './pages/About'
-import Books from './pages/Books'
-import NewBook from './pages/NewBook'
-import Home from './pages/Home'
+import { Link, OUtlet } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-      <Navbar/>
-    </>
-  );
+    <div>
+      <h1>Book List</h1>
+      <nav style={{ borderBottom: '1px solid'}}
+      >
+        <Link to='/home'>Home</Link> | {' '}
+        <Link to ='/about'>About</Link> | {' '}
+        <Link to='/books'>Books</Link> | {' '}
+        <Link to='/new-book'>New Book</Link>
+      </nav>
+      <p>Outlet component here</p>
+    </div>
+  )
 }
 
 export default App;
