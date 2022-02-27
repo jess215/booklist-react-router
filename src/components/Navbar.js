@@ -3,9 +3,19 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div>
-            <h1>Navbar Here</h1>
-        </div>
+        <>
+            <Nav>
+                <NavLink to="/">
+                    <h1>Logo</h1>
+                </NavLink>
+                <Bars />
+                <NavMenu>
+                    <NavLink to="/books" activeStyle>
+                        About
+                    </NavLink>
+                </NavMenu>
+            </Nav>
+        </>
     )
 }
 
